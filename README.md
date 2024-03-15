@@ -37,3 +37,7 @@ Program, library and reference designs to develop for MacroSilicon MS2106/MS2109
 ### [HxD](https://mh-nexus.de/en/hxd/)
 
 HxD is a hex editor. It can be used to edit firmware for MS2109.
+
+### [EDID Decode](https://people.freedesktop.org/~imirkin/edid-decode/)
+
+EDID Decode is a online web app to decode hex EDID values to readable format.
