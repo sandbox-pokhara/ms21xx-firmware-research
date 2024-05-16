@@ -25,6 +25,10 @@ TODO
 
 ## Useful Tools
 
+### [ms21xx-firmware](https://github.com/sandbox-pokhara/ms21xx-firmware)
+
+Tool to generate ms21xx firmware with custom VID, PID, EDID, descriptors and serial number.
+
 ### [MS21XX MS91XX Download Tool](https://mega.nz/file/HfpAnIzB#UY7eqQpnL4wJM2C5Lne6Y_5GpIF37_AqLIG4hosE0sk)
 
 This tool can be used to read/flash the firmware via HID interface.
