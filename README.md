@@ -1,10 +1,11 @@
-# MacroSilicon MS2109 EEPROM Firmware
+# MacroSilicon MS21XX EEPROM Firmware Research
 
 ## Files
 
-[Original Fimware Dumped from MS2109](MS2109-CLEAN-FIRMWARE.bin)
+- [Original Fimware Dumped from MS2109](MS2109-CLEAN-FIRMWARE.bin)
+- [Original Fimware Dumped from MS2130](MS2130-CLEAN-FIRMWARE.bin)
 
-## Data Format
+## Data Format (MS2109)
 
 | Bytes (HEX)  | Label          | Example Values                                    | Descrption                                                                                                                                                                                                                                                                                                                                                                                               |
 | ------------ | -------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,6 +18,10 @@
 | 20-2F        | Audio (USB)    | `0A 55 53 42 20 41 75 64 69 6F FF FF FF FF FF FF` | First byte is the size of string, follwed by data, example value translates to USB Audio                                                                                                                                                                                                                                                                                                                 |
 |              | EEID (Monitor) |                                                   | EEID can be used to change the monitor manufacturer name and serial number, product type, capabilities, etc. EEID is in an arbitary position, search for the header `00 FF FF FF FF FF FF 00` followed by data, which is 256 bytes including the headers. More details on EEID data format can be found [here](https://en.wikipedia.org/wiki/Extended_Display_Identification_Data#EDID_1.4_data_format). |
 | Last 4 bytes | Checksum       | `27 02 52 8D`                                     | The checksum data comes right after code ends. First two bytes, `27 02` is the checksum of bytes `02-2F` and last two bytes, `52 8D` is the checksum of code.                                                                                                                                                                                                                                            |
+
+## Data Format (MS2130)
+
+TODO
 
 ## Useful Tools
 
@@ -38,7 +43,7 @@ Program, library and reference designs to develop for MacroSilicon MS2106/MS2109
 
 ### [HxD](https://mh-nexus.de/en/hxd/)
 
-HxD is a hex editor. It can be used to edit firmware for MS2109.
+HxD is a hex editor. It can be used to edit firmware for MS21XX.
 
 ### [EDID Decode](https://people.freedesktop.org/~imirkin/edid-decode/)
 
